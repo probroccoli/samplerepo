@@ -1,0 +1,24 @@
+html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.aerisapi.com/countries/russia?client_id=13F9oSp6Uzym6EWMx8Cfm&client_secret=MSZY8CN4MIKcZ7iaPk2qZGiky4rgDPd2DrxkWrsw",
+  "method": "GET",
+  "datatype": "json",
+  "headers": {   
+  }
+}
+$.ajax(settings).done(function(response){
+ $("#countryDescription").append(JSON.stringify(response));
+});
+</script>
+<title>Sample Page</title>
+</head>
+<body>
+<h1>Sample Page</h1>
+<div id="countryDescription"></div>
+</body>
+</html>
